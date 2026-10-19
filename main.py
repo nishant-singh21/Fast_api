@@ -6,18 +6,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-
-BASE_DIR = Path(__file__).resolve().parent
-DATA_FILE = BASE_DIR / "patient.json"
-
-
-def load_data():
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    return data
-
-
-
 def load_data():
     # Load your data here
      with open("patient.json", "r") as f:
